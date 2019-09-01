@@ -1,0 +1,29 @@
+swagger: "2.0"
+
+info:
+  version: 1.0.0
+  title: Example API
+  description: Example API 
+
+schemes:
+  - http
+host: leapbase.com
+basePath: /example
+
+paths:
+  /test:
+    get:
+      summary: Example Test
+      description: Test input and return result
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: input
+          description: text input
+          required: true
+          schema:
+            type: string
+      responses:
+        default:
+          description: successful operation
